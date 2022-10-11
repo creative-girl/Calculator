@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Calculator </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gemunu Libre ">
+
+    <style>
+        #div1{
+            width: 290px;
+            height: 320px;
+            background-color: pink;
+            margin: 0px auto;
+            border-top: 40px groove lightblue;
+            border-bottom: 40px groove lightblue;
+            border-radius: 15px;
+            box-shadow: 2px 2px 8px palevioletred;
+        }
+        #Equal{
+            background-color: royalblue;
+            color: white;
+            border: none;
+        }
+        input[type=button]:hover{
+            color: darkcyan;
+            font-size: 22px;
+        }
+        #Equal:hover{
+            background-color: lightseagreen;
+        }
+        input[type=button]{
+            width: 60px;
+            height: 30px;
+            margin: 2px;
+            font-size: 20px;
+            font-family: Gemunu Libre;
+            
+        }
+        #Equal{
+            width: 110px;
+            margin-left: 14px;
+        }
+        #input1{
+            width: 90%;
+            height: 30px;
+            font-size: 20px;
+            font-family: Gemunu Libre;
+            
+        }
+        body{
+            background-image: url(https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-family: Gemunu Libre;
+            font-size: 50px;
+        }
+        
+    </style>
+    
+
+</head>
+<body>
+    <h1 style="text-align: center;"> Calculator </h1>
+    <div id="div1">
+
+    <form name="Form">
+    <br>
+    <input name="Result" id="input1" type="text" >
+    <br>
+    <br>
+    <input type="button" value="1" onclick="document.Form.Result.value+=1">
+    <input type="button" value="2" onclick="document.Form.Result.value+=2">
+    <input type="button" value="3" onclick="document.Form.Result.value+=3">
+    <input type="button" value="+" onclick="document.Form.Result.value+= '+'">
+
+    <br>
+
+    <input type="button" value="4" onclick="document.Form.Result.value+=4">
+    <input type="button" value="5" onclick="document.Form.Result.value+=5">
+    <input type="button" value="6" onclick="document.Form.Result.value+=6">
+    <input type="button" value="-" onclick="document.Form.Result.value+= '-'">
+
+    <br>
+
+    <input type="button" value="7" onclick="document.Form.Result.value+=7">
+    <input type="button" value="8" onclick="document.Form.Result.value+=8">
+    <input type="button" value="9" onclick="document.Form.Result.value+=9">
+    <input type="button" value="*" onclick="document.Form.Result.value+= '*'">
+
+    <br>
+
+    <input type="button" value="%" onclick="document.Form.Result.value+= '%'">
+    <input type="button" value="0" onclick="document.Form.Result.value+=0">
+    <input type="button" value="." onclick="document.Form.Result.value+= '.'">
+    <input type="button" value="/" onclick="document.Form.Result.value+= '/'">
+
+    <br>
+    <input type="button" value="AC" onclick="document.Form.Result.value=' '">
+    <input type="button" value="Del" onclick="Delete()">
+    <input type="button" value="=" id="Equal" onclick="document.Form.Result.value=eval(document.Form.Result.value)">
+    <br>
+    <br>
+
+    </form>
+        
+
+
+    </div>
+
+
+    <script>
+    function Delete()
+    {
+        var x=document.Form.Result.value;
+        document.Form.Result.value = x.substr(0,x.length-1);
+    }
+    </script>
+</body>
+</html>
